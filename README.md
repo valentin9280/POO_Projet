@@ -1,11 +1,11 @@
 # BLE_Projet
 <code>uname -r</code></pre>
 
-Tester
+Tester  
+BLUETOOTH LOW ENERGY SCAN
 Trouver le sensorTag  
 <code>$ hcitool lescan</code></pre>
 
-BLUETOOTH LOW ENERGY SCAN  
 B0:B4:48:BF:DA:06 (unknown)  
 B0:B4:48:BF:DA:06 SensorTag  
 
@@ -17,8 +17,8 @@ $ sudo haciconfig hci1 up
 
 Connection au sensortag
 <code>
-$ gattool -i
-$ [LE]> connect "adresse du sentortag"
+$ gattool -i  
+$ [LE]> connect "adresse du sentortag"  
 </code></pre>
 
 Ou
