@@ -4,8 +4,6 @@ import os
 import sys
 import time
 import pexpect
-import urllib2
-import urllib
 
 #Adresse MAC du TagSensor
 ble_addr ="B0:B4:48:BF:DA:06"
@@ -22,11 +20,10 @@ def floatfromhex(h):
 #Classe sensorTag
 class sensorTag:
 
-    #Constructeur
+    #Methode d'initialisation
     def __init__(self,ble_addr):
         self.ble_addr = ble_addr
         self.child =pexpect.spawn('gatttool -b  ' + ble_addr +  '  --interactive')
-        #self.child.expect('[LE]>')
         print "Tentative de connection au sensorTag"
         self.child.sendline('connect')
         self.child.expect('[CON].*>')
@@ -37,7 +34,6 @@ class sensorTag:
     def get_IRtmp(self):
         #Activer la sonde
         self.child.sendline ('char-write-cmd 0x24 01')
-        #self.child.expect('[LE]>')
         self.child.sendline ('char-read-hnd 0x21')
         self.child.expect('descriptor: .*')
         rval=self.child.after.split()
@@ -52,7 +48,6 @@ class sensorTag:
     def get_HUM(self):
         # Activer la sonde
         self.child.sendline('char-write-cmd 0x2C 01')
-        # self.child.expect('[LE]>')
         self.child.sendline('char-read-hnd 0x29')
         self.child.expect('descriptor: .*')
         rval=self.child.after.split()
@@ -69,7 +64,6 @@ class sensorTag:
         #Recuperation valeur de luminosite
         self.child.sendline('char-write-cmd 0x44 01')
         #Active la lecture des datas
-        #self.child.expect('[LE]>')
         self.child.sendline('char-read-hnd 0x41')
         self.child.expect('descriptor: .*')
         rval=self.child.after.split()
