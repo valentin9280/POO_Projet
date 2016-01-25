@@ -3,17 +3,17 @@ Get the latest version of BlueZ
 ===============================
 Télécharger la derniére version de  BlueZ   <b>www.bluez.org</b>.
 
-<code>wget http://www.kernel.org/pub/linux/bluetooth/bluez-5.11.tar.gz</code></pre>
+<code>$ wget http://www.kernel.org/pub/linux/bluetooth/bluez-5.11.tar.gz</code></pre>
 
 Extract the BlueZ tar file with the following command
 
-<code>tar xvfJ bluez-5.11.tar.xz</code></pre>
+<code>$ tar xvfJ bluez-5.11.tar.xz</code></pre>  
 
-<code>cd bluez-5.11
-./configure --disable-systemd
-make
-make install
-</code></pre>
+<code>cd bluez-5.11        
+$ ./configure --disable-systemd         
+$ make            
+$ make install         
+</code></pre>          
 
 Tester BLUETOOTH LOW ENERGY SCAN
 ===============================
@@ -30,11 +30,11 @@ Activer le périphérique BLE de votre machine
 
 Connection au sensortag  
 
-<code>$ gattool -i  </code></pre>
-<code>$ [LE]> connect "adresse du sentortag"  </code></pre>
+<code>$ gattool -i  </code></pre>          
+<code>$ [LE]> connect "adresse du sentortag"  </code></pre>          
 
 Ou  
-<code> $ gatttool -b "adresse du sensortag" --interactive </code></pre>
+<code> $ gatttool -b "adresse du sensortag" --interactive </code></pre>      
 
 Identifiant et adresse des capteurs  
 <code>$[CON][B0:B4:48:BF:DA:06][LE]>primary </code></pre>
