@@ -15,29 +15,19 @@ $ sudo hciconfig
 $ sudo haciconfig hci1 up
 </code></pre>
 
-Connection au sensortag
-<code>
-$ gattool -i  
-$ [LE]> connect "adresse du sentortag"  
-</code></pre>
+Connection au sensortag  
 
-Ou
+<code>$ gattool -i  </code></pre>
+<code>$ [LE]> connect "adresse du sentortag"  </code></pre>
+
+Ou  
 <code> $ gatttool -b "adresse du sensortag" --interactive </code></pre>
 
-Identifiant et adresse des cpateurs
-$[CON][B0:B4:48:BF:DA:06][LE]>primary
+Identifiant et adresse des capteurs  
+<code>$[CON][B0:B4:48:BF:DA:06][LE]>primary </code></pre>
 
-Activer un capteur
-[CON][B0:B4:48:BF:DA:06][LE]> char-write-cmd "handle 01
+Activer un capteur  
+<code>[CON][B0:B4:48:BF:DA:06][LE]> char-write-cmd "handle (configuration) capteur" 01 </code></pre>
 
-
-
-[   ][90:59:AF:0A:A8:4E][LE]> connect
-[CON][90:59:AF:0A:A8:4E][LE]> char-read-hnd 0x25
-[CON][90:59:AF:0A:A8:4E][LE]>
-Characteristic value/descriptor: 00 00 00 00
-[CON][90:59:AF:0A:A8:4E][LE]> char-write-cmd 0x29 01
-[CON][90:59:AF:0A:A8:4E][LE]> char-read-hnd 0x25
-[CON][90:59:AF:0A:A8:4E][LE]>
-Characteristic value/descriptor: a3 ff 7c 06
-[   ][90:59:AF:0A:A8:4E][LE]>
+Lire les valeurs de retour du capteur
+<code>[CON][B0:B4:48:BF:DA:06][LE]> char-read-hnd "handle(Data) capteur" </code></pre>
