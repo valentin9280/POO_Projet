@@ -1,23 +1,28 @@
 # BLE_Projet
+<code>uname -r</code></pre>
 
 Tester
 Trouver le sensorTag
-$ hcitool lescan
+<code>$ hcitool lescan</code></pre>
 
 BLUETOOTH LOW ENERGY SCAN
 B0:B4:48:BF:DA:06 (unknown)
 B0:B4:48:BF:DA:06 SensorTag
 
 Activer le BLE
+<code>
 $ sudo hciconfig
 $ sudo haciconfig hci1 up
+</code></pre>
 
 Connection au sensortag
+<code>
 $ gattool -i
 $ [LE]> connect "adresse du sentortag"
+</code></pre>
 
 Ou
-$ gatttool -b "adresse du sensortag" --interactive
+<code> $ gatttool -b "adresse du sensortag" --interactive </code></pre>
 
 Identifiant et adresse des cpateurs
 $[CON][B0:B4:48:BF:DA:06][LE]>primary
