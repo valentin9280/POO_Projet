@@ -5,11 +5,11 @@ Tester
 Trouver le sensorTag  
 <code>$ hcitool lescan</code></pre>
 
-BLUETOOTH LOW ENERGY SCAN
-B0:B4:48:BF:DA:06 (unknown)
-B0:B4:48:BF:DA:06 SensorTag
+BLUETOOTH LOW ENERGY SCAN  
+B0:B4:48:BF:DA:06 (unknown)  
+B0:B4:48:BF:DA:06 SensorTag  
 
-Activer le BLE
+Activer le BLE  
 <code>
 $ sudo hciconfig
 $ sudo haciconfig hci1 up
