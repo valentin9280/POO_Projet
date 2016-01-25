@@ -23,11 +23,10 @@ Trouver le sensorTag
 B0:B4:48:BF:DA:06 (unknown)  
 B0:B4:48:BF:DA:06 SensorTag  
 
-Activer le BLE  
-<code>
-$ sudo hciconfig
-$ sudo haciconfig hci1 up
-</code></pre>
+Activer le périphérique BLE de votre machine  
+<code>$sudo hciconfig</code></pre>  
+<code>$sudo haciconfig hci1 up</code></pre>
+
 
 Connection au sensortag  
 
