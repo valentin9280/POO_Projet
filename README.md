@@ -2,7 +2,7 @@
 <code>uname -r</code></pre>
 
 Tester
-Trouver le sensorTag
+Trouver le sensorTag  
 <code>$ hcitool lescan</code></pre>
 
 BLUETOOTH LOW ENERGY SCAN
