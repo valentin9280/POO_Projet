@@ -7,13 +7,12 @@ Télécharger la derniére version de  BlueZ   <b>www.bluez.org</b>.
 
 Extract the BlueZ tar file with the following command
 
-<code>$ tar xvfJ bluez-5.11.tar.xz</code></pre>  
-
-<code>cd bluez-5.11        
-$ ./configure --disable-systemd         
-$ make            
-$ make install         
-</code></pre>          
+<code>$ tar xvfJ bluez-5.11.tar.xz  
+cd bluez-5.11  
+./configure --disable-systemd  
+make  
+make install  
+</code></pre>  
 
 Tester BLUETOOTH LOW ENERGY SCAN
 ===============================
